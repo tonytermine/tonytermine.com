@@ -19,19 +19,20 @@
 		<link href="css/main.css" rel="stylesheet">
 	</head>
 
-	<body data-spy="scroll" data-target=".navbar-custom">
-		<div id="top"></div>
+	<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 			<div class="logo-nav-container">
-				<div class="navbar-header">
+				<div class="navbar-header page-scroll">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars fa-2x"></i></button>
-					<a class href="#top"><img src="img/tt-logo.png" class="black-logo" alt="Tony Termine"></a>
-					<a href="#top" class="logo"><img src="img/tt-logo-white.png" class="white-logo" alt="Tony Termine"></a>
+					<a class href="#page-top"><img src="img/tt-logo.png" class="black-logo" alt="Tony Termine"></a>
+					<a href="#page-top" class="logo"><img src="img/tt-logo-white.png" class="white-logo" alt="Tony Termine"></a>
 				</div><!-- end navbar-header -->
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="#">About</a></li>
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="hidden"><a href="#page-top"></a></li>
+						<li class="page-scroll"><a href="#about">About</a></li>
 						<li><a href="#">Portfolio</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">Blog</a></li>
@@ -40,38 +41,79 @@
 			</div><!-- end logo-nav-container -->
 		</nav><!-- end nav -->
 		<section class="intro">
-			<div class="intro-body">
+
 				<div class="main-intro-container">
 					<h1 class="brand-heading1"><span>Hi!</span>&nbsp; I'm Tony.</h1>
 					<h1 class="brand-heading2"><span>web designer</span> <span>&amp;</span> &lt;developer&gt;</h1>
-					<p class="intro-text">I love amazing design.  The feeling you get when you see something that just looks right.  My mission is to design and build websites that achieve this feeling everytime. <a href="#" class="about-button btn-default">About</a></p>
+					<p class="intro-text">I love amazing design.  The feeling you get when you see something that just looks right.  My mission is to design and build websites that achieve this feeling everytime. &nbsp;<a href="#" class="btn-default">Read Blog</a></p>
 				</div><!-- end main-intro-container  -->
-			</div><!-- end intro-body -->
+				<div class="page-scroll main-scroll">
+			    <a href="#about" class="btn btn-circle">
+		        <i class="fa fa-chevron-down animated"></i></a>
+				</div><!-- page-scroll -->
 		</section><!-- end intro -->
-		<div class="section-header">
+
+		<div id="about" class="section-header">
 			<h2>Welcome to my Passion.</h2>
 		</div><!-- end section-header -->
-		<section class="portfolio">
+
+		<section class="about-section">
 			<div class="container">
+				<div class="row">
+				  <div class="col-sm-4 about-img">
+				  	<img src="img/tony.jpg" alt="Tony Termine">
+				  </div><!-- end about-img -->
+				  <div class="col-sm-8 about-intro">
+				  	<h2 class="about-headline">I'm Tony Termine. I design &amp; build for the web.</h2>
+						<p>I believe in responsive &amp; clean design that looks great on all devices. I work to acheive ultimate beauty through simplicity of design.</p>
+
+						<div class="col-xs-6">
+							<ul class="skills1">
+								<li>Responsive Web Design</li>
+								<li>Logo Design</li>
+								<li>Blog Design</li>
+								<li>Micro Websites</li>
+								<li>Wordpress Development</li>
+							</ul>
+						</div><!-- end col -->
+						<div class="col-xs-6">
+							<ul class="skills2">
+								<li>HTML5</li>
+								<li>CSS3/SASS</li>
+								<li>Twitter Bootstrap 3</li>
+								<li>Javascript/jQuery</li>
+								<li>AJAX/JSON</li>
+							</ul>
+						</div><!-- end col -->
+						<div class="btn-container clearfix">
+							<a href="#" class="about-btn a">My Resume</a>
+							<a href="#" class="about-btn b">Contact Me</a>
+						</div><!-- end btn-container -->
+
+
+				  </div><!-- end about-intro -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+			<div class="container project-container">
 				<div class="col-lg-12 text-center">
 						<h2>Recent Projects</h2>
 				</div><!-- end col-lg-12 -->
-				<div class="row">
-					<div class="col-sm-4 portfolio-item">
-						<a href="#"><img src="img/list-app-ss.png" alt="list app screenshot" class="img-responsive"/></a>
-						<p>This is a list making app that I designed and built that will allow users to make a quick reminder list. <a href="#" class="project-link btn-default">More</a></p>
-					</div><!-- end portfolio item -->
+					<div class="row">
+						<div class="col-sm-4 portfolio-item">
+							<a href="#"><img src="img/list-app-ss.png" alt="list app screenshot" class="img-responsive"/></a>
+							<p>This is a list making app that I designed and built that will allow users to make a quick reminder list. <a href="#" class="project-link btn-default">More</a></p>
+						</div><!-- end portfolio item -->
 
-					<div class="col-sm-4 portfolio-item">
-						<a href="#"><img src="img/hotcold-app-ss.png" alt="Hot + Cold App" class="img-responsive"/></a>
-						<p>This is a simple Hot or Cold guessing game app that I programmed using JavaScript and jQuery. <a href="#" class="project-link btn-default">More</a></p>
-					</div><!-- end portfolio-item -->
+						<div class="col-sm-4 portfolio-item">
+							<a href="#"><img src="img/hotcold-app-ss.png" alt="Hot + Cold App" class="img-responsive"/></a>
+							<p>This is a simple Hot or Cold guessing game app that I programmed using JavaScript and jQuery. <a href="#" class="project-link btn-default">More</a></p>
+						</div><!-- end portfolio-item -->
 
-					<div class="col-sm-4 portfolio-item">
-						<a href="#"><img src="img/quiz-app-ss.png" alt="quiz app screenshot" class="img-responsive"/></a>
-						<p>A simple quiz application for the web. The quiz is based on the famous book/television series Game of Thrones. <a href="#" class="project-link btn-default">More</a></p>
-					</div><!-- end portfolio-item -->
-				</div><!-- end row -->
+						<div class="col-sm-4 portfolio-item">
+							<a href="#"><img src="img/quiz-app-ss.png" alt="quiz app screenshot" class="img-responsive"/></a>
+							<p>A simple quiz application for the web. The quiz is based on the famous book/television series Game of Thrones. <a href="#" class="project-link btn-default">More</a></p>
+						</div><!-- end portfolio-item -->
+					</div><!-- end row -->
 			</div><!-- end container -->
 		</section><!-- end section portfolio -->
 
@@ -97,6 +139,8 @@
 		<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 		<!-- Bootstrap Script -->
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<!-- jQuery Easing for scroll effect -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 		<!-- Custom JavaScript -->
 		<script src="js/main.js"></script>
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
