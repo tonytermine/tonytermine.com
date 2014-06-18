@@ -12,6 +12,18 @@ $(window).scroll(function() {
 		$(".black-logo").removeClass("hide-logo");
 	}
 });
+
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+	$('.page-scroll a').bind('click', function(event) {
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+		}, 1500, 'easeInOutExpo');
+		event.preventDefault();
+	});
+});
+
 //name intro
 $(document).ready(function() {
 		$(".brand-heading1").fadeIn(4500);
@@ -19,5 +31,6 @@ $(document).ready(function() {
 		$(".brand-heading1").fadeOut('4000', function() {
 				$(".brand-heading2").fadeIn(2000);
 				$(".intro-text").fadeIn(2000);
+				$(".main-scroll").fadeIn(2000);
 		});
 });
