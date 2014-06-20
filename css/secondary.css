@@ -1,0 +1,323 @@
+/*
+portfolio.css
+=============
+
+Author:   Tony Termine
+Updated:  2014
+Notes:	  Portfolio section: tonytermine.com
+
+*/
+/* ==========================================================================
+   Color Pallette
+============================================================================= */
+/*@black: #2d2620;
+@teal: #28c3ab;
+@red: #e14d43;
+@orange: #d35c03;
+@yellow: #eaba22;
+@lightGray: #f0f0f0;
+@gray: #f5f5f5;
+@blue: #3185ff;
+@white: #fff;*/
+/* ==========================================================================
+   Portfolio Styles
+============================================================================= */
+/* -------------------------------
+  Mobile First Styles
+---------------------------------- */
+.portfolio .header {
+  border-bottom: 1px solid #28c3ab;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.portfolio h2 {
+  font-family: 'Carrois Gothic SC', sans-serif;
+  font-size: 2.8em;
+  margin: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.portfolio .portfolio-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+
+.caption h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  margin: 8px;
+}
+
+.caption h4 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+}
+
+.portfolio .portfolio-item .portfolio-link {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(24,188,156,.9);
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption:hover {
+    opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption .caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+  margin-top: -12px;
+}
+
+.portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+.portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+  margin: 0;
+}
+
+.portfolio * {
+  z-index: 2;
+}
+
+.portfolio-modal .modal-content {
+  padding: 100px 0;
+  min-height: 100%;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+  color: #222;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  font-size: 3em;
+  letter-spacing: 0;
+}
+
+.portfolio-modal .modal-content img {
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 5px 10px #aaa;
+     -moz-box-shadow: 0 5px 10px #aaa;
+          box-shadow: 0 5px 10px #aaa;
+}
+
+.portfolio-modal .modal-content p {
+  color: #222;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.portfolio-modal .modal-content .item-details {
+  margin: 10px 0;
+}
+
+.item-details a {
+  color: #28c3ab;
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+.item-details li:first-child {
+  background: #28c3ab;
+  border: 1px solid #28c3ab;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 10px 20px 10px 0;
+  padding: 10px 50px;
+  text-align: center;
+}
+
+.item-details li:first-child a {
+  color: #f0f0f0;
+  font-size: 1.4em;
+}
+
+.item-details li:first-child:hover {
+  border: 1px solid #5DDBC0;
+  background: #5DDBC0;
+}
+
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+  opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+  z-index: 1051;
+  width: 1px;
+  height: 75px;
+  margin-left: 35px;
+  background-color: #2c3e50;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+  z-index: 1052;
+  width: 1px;
+  height: 75px;
+  background-color: #2c3e50;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.close-btn {
+  background: transparent;
+  color: #28c3ab;
+  width: 180px;
+}
+
+.bottom-page-arrow {
+	bottom: -70px;
+}
+
+@media(min-width:767px) {
+  .portfolio-modal .modal-content {
+    padding: 30px 0;
+  }
+
+  .item-details a {
+    display: inline-block;
+    margin: 20px;
+  }
+
+  .item-details li:first-child a {
+    margin: 0;
+  }
+}
+
+/* ==========================================================================
+   Contact Styles
+============================================================================= */
+
+.well {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin-top: 60px;
+}
+
+.well h2,
+.social-container h2 {
+	border-bottom: 1px solid #28c3ab;
+	font-family: 'Carrois Gothic SC', sans-serif;
+	font-size: 3.5em;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+	padding: 20px 0;
+}
+
+.social-container h2 {
+	padding-bottom: 20px;
+}
+
+.controls input,
+.controls textarea {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.3em;
+}
+
+.help-block {
+	color: #f0f0f0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.1em;
+	text-align: left;
+	text-decoration: none;
+}
+
+.help-block li {
+	list-style: none;
+}
+
+.well button {
+  margin-top: 15px;
+}
+
+.contact-btn {
+	background: transparent;
+	border: 1px solid #f0f0f0;
+	color: #f0f0f0;
+	font-size: 1.5em;
+}
+
+.contact-btn:hover {
+	background: #f0f0f0;
+	border: 1px solid #f0f0f0;
+	color: #e14d43;
+}
+
+.social-container {
+	margin-top: 79px;
+}
+
+.social-buttons {
+	display: block;
+	list-style: none;
+	margin-top: -11px;
+	padding-left: 0;
+}
+
+.social-buttons li {
+	margin: 0 auto;
+}
+
+.social-buttons li:last-child {
+	border-top: 1px solid #28c3ab;
+	margin-top: 8px;
+  padding-top: 8px;
+}
+
+/* -------------------------------
+  Media Queries
+---------------------------------- */
+@media(min-width:767px) {
+	.portfolio .portfolio-item {
+  	margin: 0 0 30px;
+  }
+  .row {
+  	margin-left: 0;
+  	margin-right: 0;
+  }
+}
