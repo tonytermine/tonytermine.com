@@ -26,17 +26,15 @@ Notes:	  Portfolio section: tonytermine.com
   Mobile First Styles
 ---------------------------------- */
 .portfolio .header {
-  border-bottom: 1px solid #28c3ab;
+  border-bottom: 2px solid #28c3ab;
   margin-bottom: 30px;
   margin-top: 40px;
 }
 
 .portfolio h2 {
-  font-family: 'Carrois Gothic SC', sans-serif;
-  font-size: 2.8em;
+  font-size: 3.5em;
+  font-weight: bold;
   margin: 12px;
-  text-transform: none;
-  letter-spacing: 0;
 }
 
 .portfolio .portfolio-item {
@@ -47,7 +45,7 @@ Notes:	  Portfolio section: tonytermine.com
 .caption h3 {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.5em;
-  margin: 8px;
+  margin: 5px;
 }
 
 .caption h4 {
@@ -138,7 +136,7 @@ Notes:	  Portfolio section: tonytermine.com
   margin: 10px 0;
 }
 
-.item-details a {
+.item-details li {
   color: #28c3ab;
   display: block;
   font-family: 'Roboto Condensed', sans-serif;
@@ -151,16 +149,15 @@ Notes:	  Portfolio section: tonytermine.com
   background: #28c3ab;
   border: 1px solid #28c3ab;
   border-radius: 5px;
-  display: inline-block;
+  display: block;
   font-family: 'Roboto Condensed', sans-serif;
-  margin: 10px 20px 10px 0;
+  margin: 20px auto;
   padding: 10px 50px;
-  text-align: center;
 }
 
 .item-details li:first-child a {
   color: #f0f0f0;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
 
 .item-details li:first-child:hover {
@@ -204,8 +201,8 @@ Notes:	  Portfolio section: tonytermine.com
 }
 
 .close-btn {
-  background: transparent;
-  color: #28c3ab;
+  background: #28c3ab;
+  color: #f0f0f0;
   width: 180px;
 }
 
@@ -213,25 +210,47 @@ Notes:	  Portfolio section: tonytermine.com
 	bottom: -70px;
 }
 
+/* -------------------------------
+  Media Queries
+---------------------------------- */
 @media(min-width:767px) {
   .portfolio-modal .modal-content {
     padding: 30px 0;
   }
 
-  .item-details a {
+  .item-details li {
     display: inline-block;
     margin: 20px;
   }
 
-  .item-details li:first-child a {
-    margin: 0;
+  .item-details li:first-child {
+    display: inline-block;
+    margin: 20px 20px 20px 0;
+  }
+
+  .portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .caption h4 {
+    display: none;
+  }
+}
+
+@media(min-width:992px) {
+  .caption h4 {
+    display: block;
   }
 }
 
 /* ==========================================================================
    Contact Styles
 ============================================================================= */
-
 .well {
 	background: none;
 	border: none;
@@ -241,7 +260,7 @@ Notes:	  Portfolio section: tonytermine.com
 
 .well h2,
 .social-container h2 {
-	border-bottom: 1px solid #28c3ab;
+	border-bottom: 2px solid #28c3ab;
 	font-family: 'Carrois Gothic SC', sans-serif;
 	font-size: 3.5em;
 	letter-spacing: -1px;
@@ -257,6 +276,12 @@ Notes:	  Portfolio section: tonytermine.com
 .controls textarea {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1.3em;
+}
+
+.controls input:focus,
+.controls textarea:focus {
+  outline-color: #28c3ab;
+  border-color: #28c3ab;
 }
 
 .help-block {
@@ -304,20 +329,21 @@ Notes:	  Portfolio section: tonytermine.com
 }
 
 .social-buttons li:last-child {
-	border-top: 1px solid #28c3ab;
+	border-top: 2px solid #28c3ab;
 	margin-top: 8px;
-  padding-top: 8px;
+  padding-top: 7px;
 }
 
-/* -------------------------------
-  Media Queries
----------------------------------- */
-@media(min-width:767px) {
-	.portfolio .portfolio-item {
-  	margin: 0 0 30px;
+@media(min-width: 767px) {
+  .well h2,
+  .social-container h2 {
+    font-size: 3em;
   }
-  .row {
-  	margin-left: 0;
-  	margin-right: 0;
+}
+
+@media(min-width: 1024px) {
+  .well h2,
+  .social-container h2 {
+    font-size: 4em;
   }
 }

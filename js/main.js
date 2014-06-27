@@ -26,7 +26,7 @@ $(function() {
 
 //name intro
 $(document).ready(function() {
-		$(".brand-heading1").fadeIn(4500);
+		$(".brand-heading1").fadeIn(1500);
 //fadeout function
 		$(".brand-heading1").fadeOut('4000', function() {
 				$(".brand-heading2").fadeIn(2000);
@@ -65,7 +65,7 @@ $("input,textarea").jqBootstrapValidation({
 		// Success message
 			$('#success').html("<div class='alert alert-success'>");
 			$('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append( "</button>");
-			$('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
+			$('#success > .alert-success').append("<strong> Thank You! Your message has been sent. </strong>");
 			$('#success > .alert-success').append('</div>');
 				//clear all fields
 			$('#contactForm').trigger("reset");
@@ -75,7 +75,7 @@ $("input,textarea").jqBootstrapValidation({
 		// Fail message
 			$('#success').html("<div class='alert alert-danger'>");
 			$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append( "</button>");
-			$('#success > .alert-danger').append("<strong>Sorry "+firstName+" it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:me@example.com?Subject=Message_Me from myprogrammingblog.com;>me@example.com</a> ? Sorry for the inconvenience!");
+			$('#success > .alert-danger').append("<strong>Sorry "+firstName+" it seems that the mail server is not responding...</strong> Could you please email me directly to <a href='mailto:tony@tonytermine.com?Subject=Message from tonytermine.com;>tony@tonytermine.com</a> ? Sorry for the inconvenience!");
 			$('#success > .alert-danger').append('</div>');
 			//clear all fields
 			$('#contactForm').trigger("reset");
