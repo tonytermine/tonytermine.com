@@ -178,6 +178,10 @@ a:focus {
 	text-align: center;
 }
 
+.main-intro-container {
+	margin: 0 auto;
+}
+
 .brand-heading1 {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 3.4em;
@@ -573,7 +577,6 @@ body {
 
 	.logo-nav-container,
 	.main-intro-container {
-		margin: 0 auto;
 		padding: 0;
 		width: 97%;
 		max-width: 1200px;
